@@ -5,7 +5,7 @@ img.src = "./media/flappy-bird-set.png";
 
 let gamePlaying = false;
 const gravity = 0.15;
-const size = [51, 36];
+const size = [51, 35];
 const jump = -5;
 const cTenth = canvas.width / 10;
 
@@ -139,7 +139,7 @@ const render = () => {
     ctx.drawImage(
       img,
       432,
-      Math.floor((index % 9) / 3) * size[1],
+      Math.floor((index % 27) / 9) * size[1],  // changé de 18/6 à 27/9
       ...size,
       cTenth,
       flyHeight,
@@ -151,7 +151,7 @@ const render = () => {
     ctx.drawImage(
       img,
       432,
-      Math.floor((index % 9) / 3) * size[1],
+      Math.floor((index % 27) / 9) * size[1],  // changé de 18/6 à 27/9
       ...size,
       canvas.width / 2 - size[0] / 2,
       flyHeight,
